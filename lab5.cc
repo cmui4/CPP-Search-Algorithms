@@ -55,7 +55,7 @@ int main() {
 			
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
-
+					InsertionSort(wData, sz);
 
 			
 					end_time = clock();		// end cpu timer
