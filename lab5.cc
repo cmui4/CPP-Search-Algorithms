@@ -43,13 +43,17 @@ int main() {
 						 return 0;
 					}
 					else cout << endl << "File size is: " << sz << endl;
+
+					//printarray(data, sz);
 			
 					break;
 
 			case 2: // Sort function A
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-                    
+                    for(int k = 0; k <= sz; k++){
+                    	wData[k] = data[k];
+                    }
                     
 					begin_time = clock();   // start cpu timer
 			
@@ -61,9 +65,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Insertion Sort ran for " << cpu_time_used << " secs.";
 			
-					ofilename = "lab5_A_out.txt";
+					ofilename = "lab5_InsertionSort_out.txt";
 					writefile(wData, sz, ofilename);
 					
 					if (sz < 0)	 {
