@@ -13,11 +13,11 @@ void	printmenu() {
 			cout << "Please choose from the following menu:" << endl;
 			cout << "  1: Read input file" << endl;
 			cout << "  2: Sort using Insertion Sort" << endl;
-			cout << "  3: Sort using Bsort" << endl;
-			cout << "  4: Sort using Csort" << endl;
-			cout << "  5: Sort using Dsort" << endl;			
-			cout << "  6: Sort using Esort" << endl;
-			cout << "  7: Sort using Fsort" << endl;			
+			cout << "  3: Sort using Bubble Sort" << endl;
+			cout << "  4: Sort using Selection Sort" << endl;
+			cout << "  5: Sort using Heap Sort" << endl;
+			cout << "  6: Sort using Counting Sort" << endl;
+			cout << "  7: Sort using Quicksort" << endl;
 			cout << "  0: Exit program" << endl;
 			cout << endl << "Enter your choice: ";
 
