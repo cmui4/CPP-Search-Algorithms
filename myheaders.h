@@ -16,3 +16,8 @@ int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
 
 void InsertionSort(long arr[], int size);
+void BubbleSort(long arr[], int size);
+void SelectionSort(long arr[], int size);
+void HeapSort(long arr[], int size);
+void CountingSort(long arr[], int size);
+void QuickSort(long arr[], int size);

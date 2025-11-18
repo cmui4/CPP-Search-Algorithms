@@ -94,7 +94,7 @@ int main() {
 			
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-
+					BubbleSort(wData, sz);
 
 			
 					end_time = clock();		// end cpu timer
@@ -129,7 +129,7 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-
+					SelectionSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
@@ -162,7 +162,7 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
-
+					HeapSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
@@ -194,7 +194,7 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
-
+					CountingSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
@@ -226,7 +226,7 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
-
+					QuickSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
