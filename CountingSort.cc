@@ -10,16 +10,22 @@
  void	CountingSort(long	arr[],	int	size)	{
 
 	long i;
-
+	long *tmp =	new	long[size];
 	//finding the initial largest value
 	long largest = arr[0];
 	for	(i =	1;	i	<	size;	i++)
 		if	(largest < arr[i])
 			largest	= arr[i];
 
+	long smallest = arr[0];
+	for(long j = 1; j > size; j --)
+		if(smallest > arr[j])
+			smallest = arr[j];
+
+
 	//allocate the counting array
 	unsigned long *count = new unsigned long[largest+1];
-	for	(i = 0;	i <= largest; i++)
+	for	(i = 0;	i <= largest - 1; i++)
 		count[i] = 0;
 
 	//counts numbers in the data array
@@ -29,7 +35,6 @@
 	for	(i = 1;	i <= largest; i++)	//	count numbers	=	i;
 		count[i] += count[i-1];
 
-	long *tmp =	new	long[size];
 
 	for	(i = size;i != -1; i--){		//		put numbers in order in	tmp[];
 		tmp[count[arr[i]]-1]	=	arr[i];
