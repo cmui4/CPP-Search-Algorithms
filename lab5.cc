@@ -51,7 +51,7 @@ int main() {
 			case 2: // Sort function A, Insertion Sort
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-                    for(int k = 0; k <= sz; k++){
+                    for(int k = 0; k < sz; k++){
                     	wData[k] = data[k];
                     }
                     
@@ -60,7 +60,6 @@ int main() {
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 					InsertionSort(wData, sz);
-
 			
 					end_time = clock();		// end cpu timer
 
@@ -68,7 +67,10 @@ int main() {
 					cout << endl << "Insertion Sort ran for " << cpu_time_used << " secs.";
 			
 					ofilename = "lab5_InsertionSort_out.txt";
+					//ofilename = "lab5_test.txt";
+
 					writefile(wData, sz, ofilename);
+					//printarray(wData, sz);
 					
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
@@ -82,13 +84,11 @@ int main() {
 			case 3: // Sort function B
 			
 			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-					for(int k = 0; k <= sz; k++){
+					for(int k = 0; k < sz; k++){
 						wData[k] = data[k];
 					}
 
-			        
-					begin_time = clock();   // start cpu timer
-			
+
 
 					begin_time = clock();   // start cpu timer
 			
@@ -118,11 +118,9 @@ int main() {
 			case 4: //Selection Sorting Algorithm
 
 					//copy contents of data array to wData array
-					for(int k = 0; k <= sz; k++){
+					for(int k = 0; k < sz; k++){
 				        wData[k] = data[k];
 				     }
-
-					begin_time = clock();   // start cpu timer
 
 
 					begin_time = clock();   // start cpu timer
@@ -151,11 +149,9 @@ int main() {
 			case 5://Heap Sorting Algorithm
 
 					//copy contents of data array to wData array
-					for(int k = 0; k <= sz; k++){
+					for(int k = 0; k < sz; k++){
 						wData[k] = data[k];
 					 }
-
-					begin_time = clock();   // start cpu timer
 
 
 					begin_time = clock();   // start cpu timer
@@ -183,11 +179,9 @@ int main() {
 					break;
 			case 6: //Counting Sort Algorithm
 					//copy contents of data array to wData array
-					for(int b = 0; b <= sz; b++){
+					for(int b = 0; b < sz; b++){
 						wData[b] = data[b];
 					 }
-
-					begin_time = clock();   // start cpu timer
 
 
 					begin_time = clock();   // start cpu timer
@@ -215,11 +209,9 @@ int main() {
 					break;
 			case 7: //Quicksort Algorithm
 					//copy contents of data array to wData array
-					for(int k = 0; k <= sz; k++){
+					for(int k = 0; k < sz; k++){
 						wData[k] = data[k];
 					 }
-
-					begin_time = clock();   // start cpu timer
 
 
 					begin_time = clock();   // start cpu timer

@@ -29,7 +29,7 @@
 	for(i = 0;	i <= largest; i++)
 		count[i] = 0;
 
-	unsigned long *count = new unsigned long[smallest - 1];
+	//unsigned long *count = new unsigned long[smallest - 1];
 	for(j = 0; j >= smallest; j--)
 		count[j] = 0;
 
