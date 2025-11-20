@@ -94,7 +94,7 @@ int main() {
 			
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-					BubbleSort(wData, sz);
+					//BubbleSort(wData, sz);
 
 			
 					end_time = clock();		// end cpu timer
@@ -129,7 +129,7 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-					SelectionSort(wData, sz);
+					//SelectionSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
@@ -162,15 +162,15 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
-					HeapSort(wData, sz);
+					//HeapSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "Selection Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Heap Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_SelectionSort_out.txt";
+					ofilename = "lab5_HeapSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -183,8 +183,8 @@ int main() {
 					break;
 			case 6: //Counting Sort Algorithm
 					//copy contents of data array to wData array
-					for(int k = 0; k <= sz; k++){
-						wData[k] = data[k];
+					for(int b = 0; b <= sz; b++){
+						wData[b] = data[b];
 					 }
 
 					begin_time = clock();   // start cpu timer
@@ -200,9 +200,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "Selection Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Counting Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_SelectionSort_out.txt";
+					ofilename = "lab5_CountingSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -226,15 +226,15 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
-					QuickSort(wData, sz);
+					//QuickSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "Selection Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Quick Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_SelectionSort_out.txt";
+					ofilename = "lab5_QuickSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
