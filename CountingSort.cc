@@ -20,30 +20,32 @@
 
 	long smallest = arr[0];
 	for(j = 1; j < size; j++)
-		if(smallest < arr[j])
+		if(smallest > arr[j])
 			smallest = arr[j];
 
+	long range = largest - smallest + 1;
 
 	//allocate the counting array
-	unsigned long *count = new unsigned long[largest+1];
-	for(i = 0;	i <= largest; i++)
+	unsigned long *count = new unsigned long[range];
+	for(i = 0;	i < range; i++)
 		count[i] = 0;
-
-	//unsigned long *count = new unsigned long[smallest - 1];
-	for(j = 0; j >= smallest; j--)
-		count[j] = 0;
 
 	//counts numbers in the data array
 	for	(i = 0; i <	size; i++)
-		count[arr[i]]++;
+		count[arr[i] - smallest]++;
 
-	for	(i = 1;	i <= largest; i++)	//	count numbers	=	i;
+	for	(i = 1;	i < range; i++)	//	count numbers	=	i;
 		count[i] += count[i-1];
 
 
-	for	(i = size;i != -1; i--){		//		put numbers in order in	tmp[];
-		tmp[count[arr[i]]-1]	=	arr[i];
-		count[arr[i]]--;
+	for	(i = size - 1; i >= 0; i--){		//		put numbers in order in	tmp[];
+		long val = arr[i];
+		count[val - smallest]--;
+		tmp[count[val - smallest]] = val;
+
+		//commented out equations from the book
+		//tmp[count[arr[i]]-1]	=	arr[i];
+		//count[arr[i]]--;
 	}
 	for	(i = 0;i < size; i++)				//	transfer numbers from	tmp[]
 		arr[i]	= tmp[i];//	to the original array;
