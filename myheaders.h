@@ -3,8 +3,8 @@
 
 #include <string>
 #include <unistd.h>
-//#define MAXSIZE	 2100000
-#define MAXSIZE 100 //change MAXSIZE just for testing purposes, added a test text file of 100 numbers
+#define MAXSIZE	 2100000
+//#define MAXSIZE 100 //change MAXSIZE just for testing purposes, added a test text file of 100 numbers
 
 
 using namespace std;
