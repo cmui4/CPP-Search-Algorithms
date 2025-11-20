@@ -2,9 +2,25 @@
  * SelectionSort.cc
  *
  *  Created on: Nov 18, 2025
- *      Author: rlavel01
- */
+ *      Author: cmui4
+*/
+#include "myheaders.h"
 
+void SelectionSort(long arr[], int size) {
+    // Outer loop: position where we place the next smallest element
+    for (int i = 0; i < size - 1; i++) {
+        int minIndex = i;  // assume current position is the minimum
 
+        // Inner loop: find index of smallest element in the unsorted part
+        for (int j = i + 1; j < size; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
 
-
+        // Swap only if we found a smaller element
+        if (minIndex != i) {
+            swap(arr[i], arr[minIndex]);  // uses your swap(long&, long&)
+        }
+    }
+}
