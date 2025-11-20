@@ -10,19 +10,19 @@
 void BubbleSort(long arr[], int size) {
     bool swapped;
 
-    // Outer loop runs size-1 times
+    // the outer loop runs size-1 times
     for (int i = 0; i < size - 1; i++) {
         swapped = false;
 
-        // Inner loop compares adjacent elements
+        // then the inner loop compares adjacent elements
         for (int j = 0; j < size - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
-                swap(arr[j], arr[j + 1]);  // uses your swap(long&, long&)
+                swap(arr[j], arr[j + 1]);  // uses swap from helper
                 swapped = true;
             }
         }
 
-        // Optimization: if no swap was made, array is already sorted
+        // if no swap has been made, break
         if (!swapped) break;
     }
 }
